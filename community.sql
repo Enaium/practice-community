@@ -33,7 +33,7 @@ CREATE TABLE `post` (
   PRIMARY KEY (`id`),
   KEY `post_user_id_fk` (`user_id`),
   CONSTRAINT `post_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='post';
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='post';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,9 +76,10 @@ INSERT INTO `post` VALUES
 (31,'This is a tenth post','# This is a first post\n\n```java\npublic static void main() {\n    System.out.println(\"This is a first post\")\n}\n```',1,'2022-11-03 09:38:46','2022-11-03 14:26:35',0),
 (32,'This is a tenth post','# This is a first post\n\n```java\npublic static void main() {\n    System.out.println(\"This is a first post\")\n}\n```',1,'2022-11-03 09:38:46','2022-11-03 14:26:35',0),
 (33,'This is a tenth post','# This is a first post\n\n```java\npublic static void main() {\n    System.out.println(\"This is a first post\")\n}\n```',1,'2022-11-03 09:38:46','2022-11-03 14:26:35',0),
-(34,'This is a tenth post','# This is a first post\n\n```java\npublic static void main() {\n    System.out.println(\"This is a first post\")\n}\n```',1,'2022-11-03 09:38:46','2022-11-03 14:26:35',0),
+(34,'This is a tenth post','# This is a first post\n\n```java\npublic static void main() {\n    System.out.println(\"This is a first post\")\n}\n```',1,'2022-11-03 09:38:46','2022-11-24 09:24:04',0),
 (35,'too long','1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n14.\n15.\n16.\n17.\n18.\n19.\n20.\n21.\n22.\n23.\n24.\n25.\n26.\n27.\n28.\n29.\n30.\n31.\n32.\n33.\n34.\n35.\n36.\n37.\n38.\n39.\n40.\n41.\n42.\n43.\n44.\n45.',1,'2022-11-05 16:56:48','2022-11-23 09:15:42',0),
-(36,'too wide','# Tiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiitile',1,'2022-11-05 16:58:47','2022-11-05 17:52:13',1);
+(36,'too wide','# Tiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiitile',1,'2022-11-05 16:58:47','2022-11-05 17:52:13',1),
+(37,'2022-11-24','# 2022-11-24\n\n```java\npublic static void main() {\n System.out.println(\"2022-11-24\");\n}\n```',1,'2022-11-24 10:10:47','2022-11-24 10:12:13',0);
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +102,7 @@ CREATE TABLE `post_comment` (
   KEY `post_comment_post_id_fk` (`post_id`),
   CONSTRAINT `post_comment_post_id_fk` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`),
   CONSTRAINT `post_comment_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,7 +136,10 @@ INSERT INTO `post_comment` VALUES
 (24,1,35,'123','2022-11-22 09:15:57',0),
 (25,1,35,'123','2022-11-22 09:15:57',0),
 (26,1,35,'123','2022-11-22 09:15:57',0),
-(27,1,35,'123','2022-11-23 09:15:42',0);
+(27,1,35,'123','2022-11-23 09:15:42',0),
+(28,1,34,'123','2022-11-23 16:38:40',0),
+(29,1,34,'12323123213','2022-11-24 09:24:04',0),
+(30,1,37,'2022-11-24','2022-11-24 10:12:13',0);
 /*!40000 ALTER TABLE `post_comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,4 +206,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-23  9:27:16
+-- Dump completed on 2022-11-24 10:17:02
