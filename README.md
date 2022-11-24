@@ -8,4 +8,4 @@ Vite,Vue3,Axios,Bootstrap5
 
 SpringBoot,MariaDB,Spring Data JPA,SaToken
 
-![](https://imgse.com/i/zG1yfP)
+![zG1yfP.md.png](https://s1.ax1x.com/2022/11/24/zG1yfP.md.png)
